@@ -3,4 +3,4 @@ Repositório destinado aos desafios de projetos do Santander Bootcamp.
 
 
 ## Links Úteis
-[Linkedin]()
+[Meu Linkedin](https://www.linkedin.com/in/gousilin-silva-94577b139/)
