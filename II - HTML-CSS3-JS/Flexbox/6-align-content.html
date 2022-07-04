@@ -1,0 +1,154 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Align-content</title>
+    </head>
+    <style>
+        .container{
+            height: 400px;
+            border: 1px solid black;
+            max-width: 300px;
+            display: flex;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .item{
+            background-color: blueviolet;
+            padding: 0 5px;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            flex: 1;
+        }
+
+        .center{
+            align-content: center;
+        }
+
+        .stretch{
+            align-content: stretch;
+        }
+
+        .flex-start{
+            align-content: flex-start;
+        }
+
+        .flex-end{
+            align-content: flex-end;
+        }
+
+        .s-between{
+            align-content: space-between;
+        }
+
+        .s-around{
+            align-content: space-around;
+        }
+
+        .column{
+            flex-direction: column;
+        }
+
+        .central{
+            height: 500px;
+            justify-content: center;
+        }
+
+        .central .item{
+            flex: 0;
+            padding: 20px;
+        }
+
+    </style>
+    <body>
+        <h1>Row</h1>
+        <p>Center</p>
+        <section class="container center">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Stretch</p>
+        <section class="container stretch">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Flex-start</p>
+        <section class="container flex-start">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Flex-end</p>
+        <section class="container flex-end">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Space between</p>
+        <section class="container s-between">
+            <div class="item"><br>Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Space around</p>
+        <section class="container s-around">
+            <div class="item"><br>Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <h1>Columns</h1>
+        <p>Center</p>
+        <section class="container center column">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Stretch</p>
+        <section class="container stretch column">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Flex-start</p>
+        <section class="container flex-start column">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Flex-end</p>
+        <section class="container flex-end column">
+            <div class="item">Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Space between</p>
+        <section class="container s-between">
+            <div class="item"><br>Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+        <p>Space around</p>
+        <section class="container s-around">
+            <div class="item"><br>Item 1</div>
+            <div class="item">Lorem ipsum dolor sit amet</div>
+            <div class="item">Item 3 mais algum texto. Lorem ipsum</div>
+        </section>
+
+    </body>
+</html>

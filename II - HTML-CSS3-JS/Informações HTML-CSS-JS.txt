@@ -1,0 +1,112 @@
+HTML --------------------------------------------------------------------------------------------------
+
+//sites úteis
+https://unsplash.com/s/photos/html-code //pesquisa de imagens
+https://tinypng.com/ //retira metadados desnecessários
+
+//anotações sobre comandos
+<section> //seção genérica de conteudo
+<header> //cabeçalho
+<article> //conteudo relevante (arquivo de um blog)
+<aside> //conteudo relacionado ao conteudo principal da pagina (biografia, etc - barra lateral)
+<footer> //rodapé da pagina ou parte da página (de um article ou section)
+<h1>-<h6> //titulos; semântica
+<a> //ancora que interliga varios conteudos na web
+<a href="" //aponta para o hiperlink (teledone e e-mail se usa os prefixos = tel: e mailto:)
+<a target="" //como o link vai ser aberto
+<img src="" //guarda o caminho da imagem
+<img alt="" //mostra a descriação da foto quando não é carregada
+
+CSS3 -------------------------------------------------------------------------------------------------
+
+Seletores //elementos html
+Declarações //formada por uma propriedade e um valor
+
+//Box model
+margin //espaçamentos entre elementos
+border //circundam o padding e o conteudo; podemos alterar a aprencia delas
+padding //espaçamento entre a borda e o conteudo
+content //o que o conteudo representa
+
+//Listas
+ul | list-style-image: url(""); //coloca uma imagem como topico/marcador da lista
+
+//Dimensão e alinhamento
+margin //valor auto para alinhar um elemento automaticamente
+text align //center, left, right, justify
+
+Flexbox ----------------------------------------------------------------------------------------------
+Modelo de layout unidimensional
+
+Flex Container | display:flex //tag que envolve os itens; transforma itens filhos em flex itens.
+               | display //inicializador do conteiner
+               | flex-direction //direcionamento dos itens em linhas e colunas
+               | flex-wrap //quebra de linha ou não
+               | flex-flow //abreviação para o direcion e o wrap
+               | justify-content //alinha os itens do container de acordo com a direção
+               | align-items //alinha os itens de acordo com o eixo do container
+               | align-content //alinha as linhas do container
+
+Flex Item //são os elementos filhos diretos do flex container e tambem podem se tornar flex continer (propriedade display)
+               | flex-grow //define fator de crescimento
+               | flex-basis //define o tamanho inicial do item antes da distribuição do espaço restantes dentro do container
+               | flex-shrink //capacidade de redução
+               | flex //abreviação para o grow, basis e shrink
+               | order //ordem de distribuição e listagem
+               | align-self //alinhamento de um item específico
+
+Flex-direction
+    Eixos
+        row //à direção do texto (esquerda para direita)
+        row-reverse //direita para esquerda
+        column //odernação de cima para baixo
+        column-reverse //de baixo para cima
+
+Flex-wrap
+    Eixos
+        nowrap //não permite quebra de linha
+        wrap //quebra assim que um dos flex itens nao puder mais ser compactado
+        wrap-reverse //quebra de linha no sentido contrario 
+        column-reverse //de baixo para cima
+
+Flex-flow
+    //uso não é tão comum
+
+Justify content
+    flex-start
+    flex-end
+    center
+    space-between
+    space-around
+
+Align-items
+    center
+    stretch
+    flex-start
+    flex-end
+    baseline
+
+Align-content
+    center
+    stretch
+    flex-start
+    flex-end
+    space-between
+    space-around
+
+Flex-basis
+    auto
+    px, %, em
+    0
+
+Align self //propriedade que estabelece o alinhamento de modo individual sobre um item
+    auto
+    flex-start
+    flex-end
+    center
+    stretch //ocupa todo o espaço relativo
+    baseline //utiliza a linha base da tipografia
+
+//ATALHOS
+(comando)(id ou class)(*)(vezes)
+exemplo: div.item*3 --> gera o código

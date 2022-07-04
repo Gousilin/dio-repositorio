@@ -1,0 +1,70 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Align self</title>
+    </head>
+    <style>
+        .container{
+            border: 1px solid black;
+            max-width: 350px;
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .align-container{
+            align-items: center;
+        }
+
+        .center{
+            align-self: center;
+        }
+
+        .start{
+            align-self: flex-start;
+        }
+
+        .end{
+            align-self: flex-end;
+        }
+
+        .auto{
+            align-self: auto;
+        }
+
+        .stretch{
+            align-self: stretch;
+        }
+
+        .baseline{
+            align-self: baseline;
+        }
+
+
+    </style>
+    <body>
+        <section class="container align-container">
+            <div class="item auto">AAA</div>
+            <div class="item auto">123</div>
+            <div class="item auto">Lorem Ipsum is therefore always free from repetition</div>
+            <div class="item auto">ITEM 4</div>
+        </section>
+
+
+        <section class="container">
+            <div class="item center">AAA</div>
+            <div class="item start">123</div>
+            <div class="item stretch">Lorem Ipsum is therefore always free from repetition</div>
+            <div class="item end">ITEM 4</div>
+        </section>
+    </body>
+</html>

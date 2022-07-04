@@ -1,0 +1,79 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Flex-shrink</title>
+    </head>
+    <style>
+        .container{
+            border: 1px solid black;
+            max-width: 500px;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .item{
+            background-color: blueviolet;
+            margin: 5px;
+            color: white;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .s-0{
+            flex-shrink: 0;
+            flex-basis: 200px;
+        }
+
+        .s-1{
+            flex-shrink: 1;
+        }
+
+        .s-2{
+            flex-shrink: 2;
+            flex-basis: 100px;
+        }
+
+        .s-3{
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+
+        .fg-1{
+            flex-grow: 1;
+        }
+
+    </style>
+    <body>
+        <p>Flex-shrink: 1</p>
+        <div class="container">
+            <div class="item s-1 fg-1">A</div>
+            <div class="item s-1 fg-1">BBB</div>
+            <div class="item s-1 fg-1 ">C</div>
+            <div class="item s-1 fg-1">DEF</div>
+        </div>
+        <div class="container">
+            <div class="item s-1 fg-1">AAAAAAAAAAAA</div>
+            <div class="item  s-1 fg-1">BBB</div>
+            <div class="item  s-1 fg-1 ">C</div>
+            <div class="item s-1 fg-1">DEF</div>
+        </div>
+        
+        <p> Flex-shrink: 0/ Basis: 100px </p>
+        <div class="container">
+            <div class="item s-0 fg-1">AA</div>
+            <div class="item s-0 fg-1">BBB</div>
+            <div class="item s-0 fg-1">C</div>
+            <div class="item s-0 fg-1" >DEF</div>
+        </div>
+
+        <p> Flex-shrink: 1/ Basis: 100px </p>
+        <div class="container">
+            <div class="item s-1 fg-1">AA</div>
+            <div class="item s-2 fg-1">BBBBBB BBBB</div>
+            <div class="item s-2 fg-1">C</div>
+            <div class="item s-3 fg-1" >DEF</div>
+        </div>
+    </body>
+</html>
