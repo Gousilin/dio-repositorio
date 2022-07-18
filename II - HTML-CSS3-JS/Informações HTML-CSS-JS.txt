@@ -110,3 +110,309 @@ Align self //propriedade que estabelece o alinhamento de modo individual sobre u
 //ATALHOS
 (comando)(id ou class)(*)(vezes)
 exemplo: div.item*3 --> gera o código
+
+JAVASCRIPT --------------------------------------------------------------------
+
+O JavasScript é uma linguagem interpretada (está sendo rodada em tempo real e o código está sendo disponibilizado instantaneamente).
+É uma linguagem baseada em protótipos (conjunto de funções em uma estrutura de dados).
+É um multiparadigma (pode escolher entre orientação a objsetos, programação funcional ou programação estruturada).
+Comumente utilizada em aplicações web client-side.
+Segue o padrão ECMAScript
+
+Aplicações: web, mobile, smartwatches, games, internet of things, APIs.
+
+
+Podemos usar o console em página web para codar em JS.
+O NodeJS roda o JS no servidor.
+
+DOM (Document Object Model)
+
+Frameworks e bibliotecas
+// VueJS, Angular, React, jQuery
+
+Tipos de Operadores
+    aritimética (+ | - | * | ** (exponencial) | / | % | ++ | --)
+    atribuição (= | += | *= | /= | %=) //Exemplo: x *= y --> x = x * y
+    comparação (== | === | != | !== | > | < | >= | <=)
+    lógica (&& | || | !)
+    condicional (ternário) --> (condição) ? (expressao 1 ou true) : (expressao 2 ou false)
+
+Variáveis e Tipos
+    Variáveis 
+        var (escopo global) e let (escopo de bloco)
+        hoisting //atribuir valor para variavel antes de declarar ela
+        redeclaração
+        reatribuição
+        camelCase
+    
+    Constantes
+        declarada em SNAKE_UPPER_CASE
+        escopo de bloco
+        não faz hoisting
+
+Estruturas de dados
+-> Js é uma linguagem de tipagem dinâmica. Ou seja, antes de declarar um valor, você não especifica o tipo dele.
+
+    Dados primitivos (numeros, strings, booleanos, null, undefined)
+    Dados não-primitivos/compostos (objetos e arrays)
+    
+    Strings - textos/caracteres
+        declarados entre aspas ou crases
+        iterável (checar cada indice)
+        *quebra de linha --> "\n"
+        formatação
+
+        .length
+        .split("")  .split(" ")
+        .includes()
+        .startsWith()
+        .endsWith()
+        .replace("" , "") --> para ver precisamos salvar em uma var
+
+    Number - inteiros ou decimais
+
+    Booleans - true | false
+
+    Arrays - vetores
+        lista iterável de elementos
+        array.push() //adiciona um valor no final do array
+        array.pop() //tira o elemento do final do array
+        array.shift() //tira o primeiro elementoarray.unshift(adiciona no começo da lista)
+        array.includes() //se existe um elemento
+        array.every(item => item === x) //se todas entradas são de um valor 
+        array.reverse()
+
+    Objetos - estrutura do tipo chave e valor
+        inicializado com {}
+        object.values()
+        object.keys()
+    
+    Empty, null e undefined
+
+Funções
+    Variaveis criadas dentro de uma função apenas podem ser utilizadas dentro dela.
+    Return - para a função e retorna o valor que vem após ele.
+   * Função Anônima - uma variavel pode armazenar uma função.
+   * Função Autoinvocável (IIFEE) - uma função anonima entre parentses, seguida por outro par de parenteses que representa sua chamada. Pode ser usada com parametros ou armazenada em uma variavel.
+   * Callbacks - uma função passada como argumento para outra. Maior controle da ordem de chamadas.
+
+   Parâmetros
+   Valores Padrão
+   Objeto arguments - um array com todos os paramentros passados quando uma função foi invocada.
+
+   Arrays
+    Spread: uma forma de lidar separadamente com os elemenos. O que era parte de um array se torna um elemento independente.
+    Rest: combina os argumentos em um array. O que era um elemento independente se torna parte de um array.
+
+   Objetos 
+   Object destructuring - entre chaves podemos filtrar apenas os dados que interessam em um objeto.
+
+Is/else e Switch/case
+For e while
+    For ... in --> para objetos/propriedades enumeraveis
+    For .. of --> loop entre estruturas iteráveis (arrays, strings)
+
+    While - executa instruções até que a condição se torne falsa.
+    DoWhile - executa instruções até que a condição se torne falsa. A primeira execução sempre ocorre.
+
+This - uma referência de contexto. Seu valor pode mudar de acordo com o lugar no código onde foi chamada.
+    Contextos:
+    em um objeto = proprio objeto pai
+    sozinha = objeto global
+    função = objeto global
+    evento = elemento que recebeu o evento
+
+    Call - coloca o objeto que quer que o this se refira. É possivel passar parâmetros para essa função separando-os por vírgulas.
+
+    Apply - é possível passar parâmetros para essa função dentro de um array.
+
+    Bind - clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parâmetro.
+
+Arrow functions - representada por =>
+    'function()' passa a ser '() =>'
+    Se tiver só uma linha não precisa das {} nem do return.
+    Caso tenha apenas um parêmetro, pode dispensar os parênteses.
+
+    Outras restrições:
+    -this sempre será global
+    -nao existe o objeto arguments
+    -o constutur também nao pode ser utilizado
+
+
+Map - uma coleção de arrays no formato [chave, valor]; pode ser iterado por um loop for ... of.
+
+    Métodos: adicionar(set), ler(get) e deletar(delete)
+
+    Map vs Objeto   
+        Maps podem ter chaves de qualquer tipo, possuem propriedade length, sao mais faceis de iterar, utilizados quando o valor das chaves é desconhecido, os valores tem o mesmo tipo.
+
+Set 
+    São estruturas que armazenam valores únicos.
+    Adicionar(add), consultar(has), deletar (delete).
+
+    Set vs Array 
+        Possui valroes unicos; em vez de length, se usa size; nao possui metodos map, filter, reduce, etc.
+
+
+Map, Filter e reduce
+    Map cria um novo array, não modifica o original. Realiza as operações em ordem (index 0 ao index n).
+        Sintaxe: array.map(callback, thisArg)
+                                        --> valor de this dentro da função de callback
+                 callback(item, index, array)
+                    --> função a ser executada em cada elemento
+
+            Map vs Filter
+            
+            array.map((item) => item * 2); //retorno: [array definida * 2]
+            array.forEach((item) => item *2); //retorno: undefined
+    
+    Filter cria um novo array, sem modificar o original, retornando uma lista que passa pelo filtro.
+        Sintaxe: array.filter(callback, thisArg)
+
+        Exemplo:
+        cont frutas = ['maça fuji','maça verde','laranja','abacaxi'];
+        frutas.filter((fruta) => fruta.includes('maça'))
+        // retorno: ['maça fuji','maça verde'];
+
+    Reduce executa uma função em todos os elementos do array, retornando um valor único.
+        array.reduce(callbackFn, initialValue)
+        initialValue --> valor sobre qual o retorno final irá atuar
+
+        Sintaxe:
+
+        const callbackFn = function(accumulador, currentValue, index, array) {
+            array.reduce(callbackFn, inicialValue)
+        }
+
+            accumulador --> acumulador de todas as chamadas de callbackFn 
+            currentValue --> elemento atual sendo acessado pela função
+
+Debugging e Error Handling
+    Tipos de Erros:
+        ECMAScript Error:
+            - erro que ocorre em tempo de execução;
+            - comportos por mensagem, nome, linha e call stack;
+        DOMException:
+            - erros relacionados ao Document Object Model (DOM).
+    
+    Tratamento de Erros:
+        Trhow 
+        - Trata string inválida como erro.
+        
+        Try/catch
+        - o erro é tratado na função catch para manipular como quisermos.
+
+            Finally
+            - instrução chamada independente de o erro existir ou não;
+        
+    O objeto Error
+        Aceita os parâmetros, massage, ([fileName, lineNumber] NAO PADRÃO);
+        .stack é onde o erro está localizado;
+
+Javascript Assíncrono
+    Assíncrono é algo que não ocorre ou não se efetiva ao mesmo tempo.
+    O JS roda de maneira síncrona.
+
+        Promises é um objeto de processamento assíncrono. Inicialmente seu valor é desconhecido. Ela pode ser resolvida ou rejeitada.
+            Promisses tem 3 estados: pending, fulfilled e rejeced.
+
+            await myPromise
+                .then (acumular os resultados)
+                .catch (em caso de erro)
+        
+        Async/await
+            O resultado de uma promise é outra promise.
+        try .. catch
+    
+    APIs (application programming interface) é uma forma de intermediar os resultados do back-end como o apresentado do front-end. Pode ser acessada por meio de URLs.
+        JSON (Javascript Object Notation) [.json]
+    
+        Fetch //retorna uma promise
+            Operaçoes no banco (POST, GET, PUT, DELETE, etc).
+
+Orientação a Objetos
+    Paradigmas: 
+        Imperativo - como resolver os problemas
+        Declarativo - o que fazer
+    
+    Os programas são objetos que possuem uma série de propriedades. 
+    Pilares: 
+        herança - o objeto filho herda propriedades e métodos do objeto pai.
+        polimorfismo - objetos podem herdar a mesma classe pai, mas se comportam de forma diferente quando invocamos seus métodos.
+        encapsulamento - cada classe tem propriedades e métodos independentes do restante do código.
+        abstração - isolar um aspecto determinado de um estado de coisas relativamente complexo, a fim de simplificar a avaliação, classificação ou permiitr a comunicação do mesmo.
+    
+    OOJS (Javascript oriendado a objetos)
+        Protótipos: todos os objetos Js herdam propriedades e métodos de ump prototype. O objeto object.prototyp esá no topo desta cadeia. 
+
+            Cadeia de protótipos (prootype chain) - procura até chegar no null
+    
+    Classes
+        Syntatic sugar: uma sintaxe feita para facilitar a escrita
+        JS não posui classes nativamente. Todas as classes são objetos e a herança se dá por protótipos.
+            constructor
+            getter e setter
+            super()
+            método
+
+
+Módulos em JS
+    Módulos arquivos JS que tem a capacidade de exportar e importar informações de outros arquivos do mesmo tipo.
+    Vantagens: organização de código, compartilhamento de variáveis em escopos diferentes, explicita as dependencias dos arquivos.
+
+    Exportar: 
+        named exports - exportar individualmente
+        default exports - só pode haver 1 por arquivo; será o retorno padrão do arquivo.
+    
+    Importar:
+        named exports - import {} from ''
+        default exports - import arquivoNome from ''
+
+        Importando todos os dados usando *
+    
+    Vinculando ao HTML
+        Para fazer testes localmente (de um arquivo no seu computador) será necessário esar rodando um servidor. Isso pode ser feito utilizando a extensão "Live Server", do VSCode.
+    
+    Curiosidades
+        Módulos sempre estão em 'strict mode'.
+        Podem ser utilizadas as extensões .js e .mjs.
+        Para testes locais, é necessário utilizar servidor.
+        Ao importar, sempre lembre da extensão (.js, .mjs).
+        Ao importar, sempre utilize './' como ponto de partida.
+
+Manipulando DOM
+    DOM (Document Object Model): o DOM HTML é um padrão de como acessar e modificar os elementos HTML de uma página.
+
+    BOM (Browser Object Model): tudo o que está dentro do objeto window.
+
+    Métodos: 
+        Selecionando os elementos de uma página:
+        - document.getElementById()
+        - document.getElementByTagName()
+        - document.getElementByClassName()
+        - document.querySelectorAll()
+
+        Adicionar e deletar
+        - document.creatElement()
+        - document.removeChild()
+        - document.appendChild()
+        - document.replaceChild(new, old)
+    
+    Trabalhando com estilos
+        Classes (element.classList)
+        CSS: acessando diretamene o CSS de um elemento.
+    
+    Eventos
+        Qualquer tipo de ação que o usuário faça interagindo com a página.
+
+        Tipos
+        - eventos do mouse: mouseover, mouseout
+        - eventos de cliqui: click, dbclick
+        - eventos de atualização: change, localizado.
+
+        Event listener (.addEventListener): diretamente no JS, cria um evento que vai ser acionado no momento em que o usuário realizar determinada ação.
+
+        Attributo HTML => especifica a função a ser chamada diretamente no elemento HTML.
+
+TypeScript é um superset do Javascript
+    Linguagem construída por cima do JS, adicionando features à linguagem original. Para executar precisa compilar para JS.
